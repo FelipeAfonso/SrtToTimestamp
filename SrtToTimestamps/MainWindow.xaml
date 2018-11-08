@@ -1,0 +1,23 @@
+﻿<Window x:Class="SrtToTimestamps.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SrtToTimestamps"
+        mc:Ignorable="d"
+        Title="SRT To Timestamp Formatter" Height="201.833" Width="435" ResizeMode="NoResize">
+    <Grid Background="#FFCBEFFF">
+        <TextBox x:Name="textInput" HorizontalAlignment="Left" Height="24" Margin="16,14,0,0" TextWrapping="Wrap" Text="Input .srt File" VerticalAlignment="Top" Width="300" IsEnabled="False" FontSize="14"/>
+        <TextBox x:Name="textOutput" HorizontalAlignment="Left" Height="24" Margin="16,53,0,0" TextWrapping="Wrap" Text="Output Folder (leave blank for same location)" VerticalAlignment="Top" Width="300" IsEnabled="False" FontSize="14"/>
+        <Button x:Name="btnSelectInput" Content="Select" HorizontalAlignment="Left" Margin="321,14,0,0" VerticalAlignment="Top" Width="85" Height="24" Background="#FF176295" Foreground="White" Click="btnSelectInput_Click"/>
+        <Button x:Name="btnSelectOutput" Content="Select" HorizontalAlignment="Left" Margin="321,53,0,0" VerticalAlignment="Top" Width="85" Height="24" Background="#FF176295" Foreground="White" Click="btnSelectOutput_Click"/>
+        <Button x:Name="btnTranscript" Content="Transcript" HorizontalAlignment="Left" Margin="16,125,0,0" VerticalAlignment="Top" Width="390" Height="24" Background="#FFFF9090" Foreground="Black" IsEnabled="False" Click="btnTranscript_Click"/>
+        <StackPanel HorizontalAlignment="Left" Height="29" Margin="16,91,0,0" VerticalAlignment="Top" Width="390" Orientation="Horizontal">
+            <RadioButton x:Name="radio1" Content="1 by 1" Margin="0,0,15,0" VerticalAlignment="Center" GroupName="Radios" IsChecked="True"/>
+            <RadioButton x:Name="radio2" Content="2 by 2" Margin="0,0,15,0" VerticalAlignment="Center" GroupName="Radios"/>
+            <RadioButton x:Name="radio3" Content="3 by 3" Margin="0,0,15,0" VerticalAlignment="Center" GroupName="Radios"/>
+            <RadioButton x:Name="radioNG" Content="Continuous" Margin="0,0,15,0" VerticalAlignment="Center" GroupName="Radios"/>
+        </StackPanel>
+        <Label Content="Grouping:" HorizontalAlignment="Left" Margin="16,77,0,0" VerticalAlignment="Top" Height="23" FontSize="10"/>
+    </Grid>
+</Window>
